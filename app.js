@@ -14,6 +14,7 @@ const categoriesRoutes = require('./router/categories');
 const usersRoutes = require('./router/users');
 const ordersRoutes = require('./router/orders');
 // const swagger = require('./swagger');
+const myport = 'https://melodious-sawine-f11227.netlify.app'
 
 app.use(cors)
 app.options('*',cors())
@@ -42,7 +43,7 @@ mongoose.connect(connection).then(()=>{
 
 
 
-app.listen(3000,()=>{
+app.listen(myport,()=>{
     
     console.log('app is listening on port 3000')
 })
